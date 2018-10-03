@@ -1,18 +1,32 @@
 <!docktype html>
 <html lang=en>
  <head>
-   <meta charset= utf-8>
-   <tital>Saknar ni shamo</title>
+   <meta charset=utf-8>
+   <title>"Saknar ni shamo"</title>
      <link href="./main.css" rel="stylesheet" type="text/css">
- <head>
+ </head>
  <body>
-   <h1>vi älskar shamo<h1>
-   <div class="inputsection">
-    <div>
+   <h1>vi älskar shamo..<h1>
+   <div class="inputSection">
+      <div class="inputs">
       <input placeholder="Väck Shamo"></input>
-   </div class="inputs">
+    </div>
    <button class="addOption">Add</button>
  </div>
+ <div class="resultSection"></div>
  <button>Se mer bilder</button>
-</body>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script>
+  $(function() {
+    $('.resultSection').hide()
+
+    var add_option = function() {
+      $('.inputs').append('<input></input>')
+    }
+
+    $('.addOption').click(add_option)
+   })
+  </script>
+ </body>
 </html>
